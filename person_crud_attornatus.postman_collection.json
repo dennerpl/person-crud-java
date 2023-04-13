@@ -1,0 +1,273 @@
+{
+	"info": {
+		"_postman_id": "723218f9-8293-4a8a-bbed-713b44433499",
+		"name": "person_crud_attornatus",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10112070"
+	},
+	"item": [
+		{
+			"name": "Pessoa",
+			"item": [
+				{
+					"name": "Listar todas as pessoas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pessoas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pessoas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar pessoa",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Sebastião\",\r\n    \"birthdate\": \"03-03-1970\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pessoas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pessoas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar pessoa específica",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pessoas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pessoas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Adicionar pessoa",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Romário\",\r\n    \"birthdate\": \"15-01-1995\",\r\n    \"adresses\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pessoas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pessoas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar endereços de pessoas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pessoas/1/enderecos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pessoas",
+								"1",
+								"enderecos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar pessoa",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pessoas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pessoas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Endereços",
+			"item": [
+				{
+					"name": "Listar todos os endereços",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/enderecos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"enderecos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Endereço",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/enderecos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"enderecos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar endereço",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"street\": \"Comendador Antônio Alves\",\r\n    \"cep\": \"33600-000\",\r\n    \"number\": \"256\",\r\n    \"city\": \"Pedro Leopoldo\",\r\n    \"principal\": false,\r\n    \"person\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/enderecos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"enderecos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar endereço",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/enderecos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"enderecos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar endereço",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"street\": \"Comendador Antônio Alves\",\r\n    \"cep\": \"33600-000\",\r\n    \"number\": \"256\",\r\n    \"city\": \"Belo Horizonte\",\r\n    \"principal\": true,\r\n    \"person\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/enderecos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"enderecos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
